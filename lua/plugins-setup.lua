@@ -110,6 +110,9 @@ return packer.startup(function(use)
   -- github copilot
   use("github/copilot.vim")
 
+  -- ctags
+  use("ludovicchabant/vim-gutentags") -- generate ctags on save
+
   if packer_bootstrap then
     require("packer").sync()
   end
