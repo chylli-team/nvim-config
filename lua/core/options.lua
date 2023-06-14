@@ -40,3 +40,10 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 opt.tags = "./tags,tags,~/tags" -- set tags file to be in the root of the project
+
+vim.cmd([[
+augroup FileTypeOverrides
+  autocmd!
+  autocmd BufRead,BufNewFile *.t set filetype=perl
+augroup END
+]])
